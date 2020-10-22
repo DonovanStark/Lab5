@@ -1,4 +1,8 @@
 # Donovan Stark-drs474@nau.edu and Taya Patnoe-
+# The art for each letter is stored as a list of lists
+# Each list is one line of the letter
+# 5 lines total per letter with 3 characters per line
+# Includes a space
 a = [' # ', '# #', '###', '# #', '# #']
 b = ['## ', '# #', '## ', '# #', '## ']
 c = [' ##', '#  ', '#  ', '#  ', ' ##']
@@ -26,6 +30,10 @@ x = ['# #', '# #', ' # ', '# #', '# #']
 y = ['# #', '# #', ' # ', ' # ', ' # ']
 z = ['###', '  #', ' # ', '#  ', '###']
 sp = ['   ', '   ', '   ', '   ', '   ']
+
+# The variables are then assigned a key
+# The key is just the string of the letter
+
 ASCII_dict = {
     'a': a,
     'b': b,
@@ -57,6 +65,8 @@ ASCII_dict = {
 }
 
 
+# Stores the inputed word as a list of lists
+# List of lists represents the word as ASCII art
 def letter_to_ASCII(word):
     word = word.lower()
     ASCII = []
@@ -65,6 +75,8 @@ def letter_to_ASCII(word):
     return ASCII
 
 
+# Prints each line one by one for the whole word
+# Starts at the top and prints the 5 lines
 def print_horizontal(word):
     line = ''
     for i in range(5):
@@ -74,6 +86,8 @@ def print_horizontal(word):
         line = ''
 
 
+# Prints the 5 lines for each letter one at a time
+# With a space between each letter
 def print_vertical(word):
     for i in range(len(word)):
         for c in range(5):
@@ -81,6 +95,8 @@ def print_vertical(word):
         print('   ')
 
 
+# Main function that interprets user input
+# Then runs the correct functions based on input
 def main():
     inpt = input('Word: ')
     ASCII = letter_to_ASCII(inpt)
