@@ -85,7 +85,7 @@ def main():
     inpt = input('Word: ')
     ASCII = letter_to_ASCII(inpt)
     orientation = input('Vertical(v) or Horizontal(h)?: ').lower()
-    if orientation == 'v'or orientation == 'vertical':
+    if orientation == 'v' or orientation == 'vertical':
         print_vertical(ASCII)
     elif orientation == 'h' or orientation == 'horizontal':
         print_horizontal(ASCII)
