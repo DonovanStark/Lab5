@@ -1,4 +1,4 @@
-# Donovan Stark-drs474@nau.edu and Taya Patnoe-
+# Donovan Stark-drs474@nau.edu 
 # The art for each letter is stored as a list of lists
 # Each list is one line of the letter
 # 5 lines total per letter with 3 characters per line
@@ -98,15 +98,21 @@ def print_vertical(word):
 # Main function that interprets user input
 # Then runs the correct functions based on input
 def main():
+    var = 1
     inpt = input('Word: ')
     ASCII = letter_to_ASCII(inpt)
-    orientation = input('Vertical(v) or Horizontal(h)?: ').lower()
-    if orientation == 'v' or orientation == 'vertical':
-        print_vertical(ASCII)
-    elif orientation == 'h' or orientation == 'horizontal':
-        print_horizontal(ASCII)
-    else:
-        print('Try Again')
+    while var == 1:
+        orientation = input('Vertical(v) or Horizontal(h)?: ').lower()
+        if orientation == 'v' or orientation == 'vertical':
+            print_vertical(ASCII)
+            var = 0
+        elif orientation == 'h' or orientation == 'horizontal':
+            print_horizontal(ASCII)
+            var = 0
+        else:
+            print('Try Again')
+            var = 1
 
 
-main()
+if __name__ == "__main__":
+    main()
