@@ -1,4 +1,5 @@
-# Donovan Stark-drs474@nau.edu 
+# Donovan Stark-drs474@nau.edu
+# Uses the 3x5 ASCII font by Richard Kirk & Daniel Cabeza Gras
 # The art for each letter is stored as a list of lists
 # Each list is one line of the letter
 # 5 lines total per letter with 3 characters per line
